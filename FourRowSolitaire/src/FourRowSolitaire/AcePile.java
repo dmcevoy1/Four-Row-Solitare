@@ -17,6 +17,7 @@
     along with FourRowSolitaire.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+//test
 package FourRowSolitaire;
 
 import java.awt.Graphics;
