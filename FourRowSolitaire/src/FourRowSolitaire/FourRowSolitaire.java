@@ -27,6 +27,7 @@ import java.io.*;
 import java.net.URI;
 import java.net.URL;
 import java.util.LinkedList;
+
 import javax.swing.*;
 
 /**
@@ -134,7 +135,8 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
         catch(Exception ex){}
     }
 
-    private void loadData()
+    @SuppressWarnings("resource")
+	private void loadData()
     {
         String fileLocation = System.getProperty("user.home") + System.getProperty("file.separator");
         int count = 0, temp = 0, correctedStatistics = -2;
