@@ -196,7 +196,7 @@ public class Card extends JComponent
     }
 
     private void initializeCardImageString()
-    {
+    {//STREAMLINEABLE 001
         cardImageString = "images/cardfaces/";
         cardHighlighted = "images/highlightedfaces/";
 
