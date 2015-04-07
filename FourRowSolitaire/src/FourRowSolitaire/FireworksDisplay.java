@@ -80,16 +80,16 @@ public class FireworksDisplay extends JPanel implements ActionListener
             for(int j = 0; j < FIREWORKS_SIZE; j++)
             {
                 int xOffset = random.nextInt(151);
-		double signCheck = Math.random();
+                double signCheck = Math.random();
 
-		if(signCheck <= .5)
-		{
+                if(signCheck <= .5)
+                {
                     xx[i][j] = -xOffset;
                 }
-		else
-		{
+                else
+                {
                     xx[i][j] = xOffset;
-		}
+                }
             }
         }
 
