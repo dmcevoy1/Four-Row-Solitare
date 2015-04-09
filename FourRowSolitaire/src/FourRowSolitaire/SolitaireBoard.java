@@ -1523,7 +1523,7 @@ public class SolitaireBoard extends JFrame
         }
 
         public void mouseClicked(MouseEvent e)
-        {
+        {//EXPANDABLE 001
             if(!timer.isRunning() && timerToRun)
             {
                 timer.start();
