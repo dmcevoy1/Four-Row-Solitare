@@ -77,6 +77,7 @@ public class Card extends JComponent
 
     private String location = ""; //To notify the discard pile of moves from the deck
 
+    //ENHANCEMENT 008
     public Card(String suit, int number, int deckNumber, int fullNumber)
     {
         if(isValidSuit(suit) && (number >= 1 && number <= 13))
