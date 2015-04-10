@@ -99,17 +99,17 @@ public class CardStack extends JLayeredPane
 
     public synchronized Card peek()
     {
-	if (cards.isEmpty())
+    	if (cards.isEmpty())
         {
             return null;
         }
 
-	return cards.lastElement();
+    	return cards.lastElement();
     }
 
     public boolean isEmpty()
     {
-	return cards.size() == 0;
+    	return cards.size() == 0;
     }
 
     public int length()
@@ -119,14 +119,14 @@ public class CardStack extends JLayeredPane
 
     public synchronized int search(Card card)
     {
-	int i = cards.lastIndexOf(card);
-
-	if (i >= 0)
+		int i = cards.lastIndexOf(card);
+	
+		if (i >= 0)
         {
-	    return cards.size() - i;
-	}
+			return cards.size() - i;
+        }
 
-	return -1;
+		return -1;
     }
 
     public Card getCardAtLocation(int index)

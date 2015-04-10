@@ -39,11 +39,14 @@ public class ChangeOptions extends JDialog implements ActionListener
     private JRadioButton drawThree = new JRadioButton("Draw Three");
 
     private JCheckBox timerCheck = new JCheckBox("Timer");
+    //STREAMLINABLE 004
     private int timer = 0; //0 = off, 1 = on
 
     private JCheckBox winAnimationCheck = new JCheckBox("Win Animation");
+    //STREAMLINABLE 005
     private int animation = 0; //0 = off, 1 = on
     private JCheckBox winSoundsCheck = new JCheckBox("Win Sounds");
+    //STREAMLINABLE 004
     private int sounds = 0; //0 = off, 1 = on
 
     private int difficulty = 2; //1 = easy, 2 = medium, 3 = hard
