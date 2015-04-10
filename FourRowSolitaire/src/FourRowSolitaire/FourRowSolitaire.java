@@ -1,5 +1,3 @@
- //I MADE ANOTHER CHANGE
-
 /*
     This file is a part of Four Row Solitaire
 
