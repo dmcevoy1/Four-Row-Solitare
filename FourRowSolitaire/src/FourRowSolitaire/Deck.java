@@ -82,6 +82,7 @@ public class Deck
         }
     }
 
+    //STREAMLINABLE 007
     private void createCard(int cardNumber)
     {
         if(cardNumber >= 1 && cardNumber <= 13)
