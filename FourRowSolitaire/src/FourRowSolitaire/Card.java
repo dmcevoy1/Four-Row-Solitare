@@ -48,7 +48,7 @@ public class Card extends JComponent
     public static final int THREE = 3;
     public static final int FOUR = 4;
     //BUG 0002
-    public static final int FIVE = 6;
+    public static final int FIVE = 5;
     public static final int SIX = 6;
     public static final int SEVEN = 7;
     public static final int EIGHT = 8;
