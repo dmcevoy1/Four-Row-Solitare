@@ -219,11 +219,17 @@ public class Card extends JComponent
             cardHighlighted += "d";
             cardColor = 1;
         }
-        else //if(cardSuit.equals(HEARTS_SUIT))
+        else if(cardSuit.equals(HEARTS_SUIT))
         {
             cardImageString += "h";
             cardHighlighted += "h";
             cardColor = 1;
+        }
+        else
+        {
+        	cardImageString = "images/invalidcard";
+            cardHighlighted = "images/invalidcard";
+            cardColor = -1;
         }
 
         if(cardNumber == ACE)
@@ -286,10 +292,15 @@ public class Card extends JComponent
             cardImageString += "Queen";
             cardHighlighted += "Queen";
         }
-        else //if(cardNumber == KING)
+        else if(cardNumber == KING)
         {
             cardImageString += "King";
             cardHighlighted += "King";
+        }
+        else
+        {
+        	cardImageString = "images/invalidcard";
+            cardHighlighted = "images/invalidcard";	
         }
 
         cardImageString += ".png";
