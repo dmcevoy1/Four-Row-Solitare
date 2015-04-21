@@ -89,7 +89,7 @@ public class DiscardPile extends CardStack
             cardsLeftFromDraw = 0;
             
             //STREAMLINEABLE 002
-            for(int i = 0; !stack.isEmpty(); i++)
+            while(!stack.isEmpty())
             {
                 push(stack.pop());
             }
