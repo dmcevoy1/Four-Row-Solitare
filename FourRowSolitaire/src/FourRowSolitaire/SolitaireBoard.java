@@ -431,7 +431,7 @@ public class SolitaireBoard extends JFrame
         recordGame(DO_NOTHING);
     }
 
-    private void recordGame(int winOrLoss)
+    public void recordGame(int winOrLoss)
     {
         int count = 0, temp = 0;
         int gamesPlayed1e = 0, gamesWon1e = 0, winStreak1e = 0, lossStreak1e = 0,
@@ -1481,10 +1481,10 @@ public class SolitaireBoard extends JFrame
 
             if(winAnimationStatus != 0 || winSoundsStatus != 0)
             {
-                new WinScreen(winAnimationStatus, winSoundsStatus);
+                new WinScreen(winAnimationStatus, winSoundsStatus, SolitaireBoard.this);
             }
 
-            int playAgain = JOptionPane.showConfirmDialog(SolitaireBoard.this, "Play Again?", "You Won!", JOptionPane.YES_NO_OPTION);
+            /*int playAgain = JOptionPane.showConfirmDialog(SolitaireBoard.this, "Play Again?", "You Won!", JOptionPane.YES_NO_OPTION);
 
             if(playAgain == JOptionPane.YES_OPTION)
             {
@@ -1495,7 +1495,7 @@ public class SolitaireBoard extends JFrame
             {
                 recordGame(GAME_WON);
                 System.exit(0);
-            }
+            }*/
         }
 
         public void mousePressed(MouseEvent e)

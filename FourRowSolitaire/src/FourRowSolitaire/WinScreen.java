@@ -24,6 +24,7 @@ import java.awt.event.*;
 import java.io.File;
 import java.net.URL;
 import java.util.Random;
+
 import javax.sound.midi.*;
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
@@ -39,7 +40,7 @@ public class WinScreen extends JFrame
 {
     SoundThread sound = null;
 
-    public WinScreen(int animation, int sounds)
+    public WinScreen(int animation, int sounds, SolitaireBoard board)
     {
         setUndecorated(true);
         //setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -61,7 +62,7 @@ public class WinScreen extends JFrame
         {
             setSize(800,600);
 
-            FireworksDisplay fw = new FireworksDisplay(100,200);
+            FireworksDisplay fw = new FireworksDisplay(100, 200);
             add(fw);
             fw.restartDisplay();
             setLocationRelativeTo(null);
@@ -85,6 +86,19 @@ public class WinScreen extends JFrame
                 }
 
                 WinScreen.this.dispose();
+                
+                int playAgain = JOptionPane.showConfirmDialog(board, "Play Again?", "You Won!", JOptionPane.YES_NO_OPTION);
+
+                if(playAgain == JOptionPane.YES_OPTION)
+                {
+                    board.recordGame(SolitaireBoard.GAME_WON);
+                    board.newGame(SolitaireBoard.GAME_WON);
+                }
+                else//(playAgain == JOptionPane.NO_OPTION)
+                {
+                    board.recordGame(SolitaireBoard.GAME_WON);
+                    System.exit(0);
+                }
             }
         });
 
