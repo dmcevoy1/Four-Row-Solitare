@@ -224,13 +224,13 @@ public class CardStack extends JLayeredPane
     public CardStack getStack(int numCards)
     {
         CardStack temp = new CardStack();
-        int index = length() - numCards;
 
-        for(int i = length(); i > index; i--)
+        for(int i = 0; i < numCards; i++)
         {
-        	//BUG 0004
-            temp.push(getCardAtLocation(cards.size() - i - 1).clone());
-            getCardAtLocation(cards.size() - i - 1).highlight();
+        	//BUG 0004 - SOLVED
+        	temp.push(this.pop());
+        	//BUG 0006
+            getCardAtLocation((cards.size()-1) - i).highlight();
         }
 
         return temp;
