@@ -199,93 +199,112 @@ public class Card extends JComponent
     private void initializeCardImageString()
     {//STREAMLINEABLE 001
         cardImageString = "images/cardfaces/";
+        cardHighlighted = "images/highlightedfaces/";
 
         if(cardSuit.equals(SPADES_SUIT))
         {
             cardImageString += "s";
+            cardHighlighted += "s";
             cardColor = 0;
         }
         else if(cardSuit.equals(CLUBS_SUIT))
         {
             cardImageString += "c";
+            cardHighlighted += "c";
             cardColor = 0;
         }
         else if(cardSuit.equals(DIAMONDS_SUIT))
         {
             cardImageString += "d";
+            cardHighlighted += "d";
             cardColor = 1;
         }
         else if(cardSuit.equals(HEARTS_SUIT))
         {
             cardImageString += "h";
+            cardHighlighted += "h";
             cardColor = 1;
         }
         else
         {
         	cardImageString = "images/invalidcard";
-        	cardNumber = -1; //BUG 0007
-        	cardColor = -1;
+            cardHighlighted = "images/invalidcard";
+            cardColor = -1;
         }
 
         if(cardNumber == ACE)
         {
             cardImageString += "Ace";
+            cardHighlighted += "Ace";
         }
         else if(cardNumber == TWO)
         {
             cardImageString += "Two";
+            cardHighlighted += "Two";
         }
         else if(cardNumber == THREE)
         {
             cardImageString += "Three";
+            cardHighlighted += "Three";
         }
         else if(cardNumber == FOUR)
         {
             cardImageString += "Four";
+            cardHighlighted += "Four";
         }
         else if(cardNumber == FIVE)
         {
             cardImageString += "Five";
+            cardHighlighted += "Five";
         }
         else if(cardNumber == SIX)
         {
             cardImageString += "Six";
+            cardHighlighted += "Six";
         }
         else if(cardNumber == SEVEN)
         {
             cardImageString += "Seven";
+            cardHighlighted += "Seven";
         }
         else if(cardNumber == EIGHT)
         {
             cardImageString += "Eight";
+            cardHighlighted += "Eight";
         }
         else if(cardNumber == NINE)
         {
             cardImageString += "Nine";
+            cardHighlighted += "Nine";
         }
         else if(cardNumber == TEN)
         {
             cardImageString += "Ten";
+            cardHighlighted += "Ten";
         }
         else if(cardNumber == JACK)
         {
             cardImageString += "Jack";
+            cardHighlighted += "Jack";
         }
         else if(cardNumber == QUEEN)
         {
             cardImageString += "Queen";
+            cardHighlighted += "Queen";
         }
         else if(cardNumber == KING)
         {
             cardImageString += "King";
+            cardHighlighted += "King";
         }
         else
         {
-        	cardImageString = "images/invalidcard";	
+        	cardImageString = "images/invalidcard";
+            cardHighlighted = "images/invalidcard";	
         }
 
-        cardHighlighted = cardImageString + "H.png";
-        cardImageString += ".png";        
+        cardImageString += ".png";
+        cardHighlighted += "H.png";
     }
 
     public BufferedImage getImage()
