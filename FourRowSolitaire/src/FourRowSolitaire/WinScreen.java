@@ -39,9 +39,11 @@ import javax.swing.event.MouseInputAdapter;
 public class WinScreen extends JFrame
 {
     SoundThread sound = null;
+    SolitaireBoard board;
 
     public WinScreen(int animation, int sounds, SolitaireBoard gameBoard)
     {
+    	board = gameBoard;
         setUndecorated(true);
         //setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -87,16 +89,16 @@ public class WinScreen extends JFrame
 
                 WinScreen.this.dispose();
                 
-                int playAgain = JOptionPane.showConfirmDialog(gameBoard, "Play Again?", "You Won!", JOptionPane.YES_NO_OPTION);
+                int playAgain = JOptionPane.showConfirmDialog(board, "Play Again?", "You Won!", JOptionPane.YES_NO_OPTION);
 
                 if(playAgain == JOptionPane.YES_OPTION)
                 {
-                    gameBoard.recordGame(SolitaireBoard.GAME_WON);
-                    gameBoard.newGame(SolitaireBoard.GAME_WON);
+                	board.recordGame(SolitaireBoard.GAME_WON);
+                	board.newGame(SolitaireBoard.GAME_WON);
                 }
                 else//(playAgain == JOptionPane.NO_OPTION)
                 {
-                    gameBoard.recordGame(SolitaireBoard.GAME_WON);
+                	board.recordGame(SolitaireBoard.GAME_WON);
                     System.exit(0);
                 }
             }
