@@ -1483,19 +1483,6 @@ public class SolitaireBoard extends JFrame
             {
                 new WinScreen(winAnimationStatus, winSoundsStatus, SolitaireBoard.this);
             }
-
-            /*int playAgain = JOptionPane.showConfirmDialog(SolitaireBoard.this, "Play Again?", "You Won!", JOptionPane.YES_NO_OPTION);
-
-            if(playAgain == JOptionPane.YES_OPTION)
-            {
-                recordGame(GAME_WON);
-                newGame(GAME_WON);
-            }
-            else//(playAgain == JOptionPane.NO_OPTION)
-            {
-                recordGame(GAME_WON);
-                System.exit(0);
-            }*/
         }
 
         public void mousePressed(MouseEvent e)
