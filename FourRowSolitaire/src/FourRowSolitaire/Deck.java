@@ -85,29 +85,6 @@ public class Deck
     //STREAMLINABLE 007
     private void createCard(int cardNumber)
     {
-        if(cardNumber >= 1 && cardNumber <= 13)
-        {
-            deck.add(new Card(Card.SPADES_SUIT, cardNumber, deckNumber, cardNumber));
-        }
-        else if(cardNumber >= 14 && cardNumber <= 26)
-        {
-            cardNumber -= 13; // To make the cardNumber 1-13 instead of 14-26
-            deck.add(new Card(Card.CLUBS_SUIT, cardNumber, deckNumber, cardNumber + 13));
-        }
-        else if(cardNumber >= 27 && cardNumber <= 39)
-        {
-            cardNumber -= 26; // To make the cardNumber 1-13 instead of 27-39
-            deck.add(new Card(Card.DIAMONDS_SUIT, cardNumber, deckNumber, cardNumber + 26));
-        }
-        else if(cardNumber >= 40 && cardNumber <= 52)
-        {
-            cardNumber -= 39; // To make the cardNumber 1-13 instead of 40-52
-            deck.add(new Card(Card.HEARTS_SUIT, cardNumber, deckNumber, cardNumber + 39));
-        }
-        else
-        {
-            //Let user know the card is invalid
-            deck.add(new Card(Card.INVALID_SUIT, Card.INVALID_NUMBER, deckNumber, Card.INVALID_NUMBER));
-        }
+    	deck.add(new Card(deckNumber, cardNumber));
     }
 }

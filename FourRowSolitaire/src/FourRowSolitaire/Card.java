@@ -25,6 +25,7 @@ import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
 import java.net.URL;
+
 import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 
@@ -78,6 +79,16 @@ public class Card extends JComponent
     private String location = ""; //To notify the discard pile of moves from the deck
 
     //ENHANCEMENT 008
+    /**
+     * A constructor to determine the suit and number of a card based on its deckNumber and cardNumber.
+     * 
+     * @param deckNumber The pattern on back of card.
+     * @param fullNumber The position of the card in the deck.
+     */
+    public Card(int deckNumber, int fullNumber) {
+    	this(findSuit(fullNumber), (fullNumber % 13)+1, deckNumber, fullNumber);
+    }
+    
     public Card(String suit, int number, int deckNumber, int fullNumber)
     {
         if(isValidSuit(suit) && (number >= 1 && number <= 13))
@@ -128,6 +139,25 @@ public class Card extends JComponent
         }
 
         repaint();
+    }
+    
+    /**
+     * A private method to help the constructor determine the suit. Must be static because it is called in the constructor.
+     * @param fullNumber the card position in the deck.
+     * @return correct suit as a string.
+     */
+    private static String findSuit(int fullNumber) {
+    	String suit = INVALID_SUIT;
+    	if(fullNumber >= 1 && fullNumber <= 13)
+    		suit = SPADES_SUIT;
+    	else if(fullNumber >= 14 && fullNumber <= 26)
+    		suit = CLUBS_SUIT;
+    	else if(fullNumber >= 27 && fullNumber <= 39)
+    		suit = DIAMONDS_SUIT;
+    	else if(fullNumber >= 40 && fullNumber <= 52)
+    		suit = HEARTS_SUIT;
+    	
+    	return suit;
     }
 
     public void unhighlight()
@@ -350,7 +380,7 @@ public class Card extends JComponent
 
     public Card clone()
     {
-        Card card = new Card(cardSuit, cardNumber, deckNumber, fullCardNumber);
+        Card card = new Card(deckNumber, fullCardNumber);
         return card;
     }
 }
