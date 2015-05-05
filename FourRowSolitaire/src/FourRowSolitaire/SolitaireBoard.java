@@ -1,5 +1,5 @@
-/*
-     This file is a part of Four Row Solitaire
+/**
+ *   This file is a part of Four Row Solitaire
 
     Copyright (C) 2010 by Matt Stephen
 
@@ -15,6 +15,9 @@
 
     You should have received a copy of the GNU General Public License
     along with FourRowSolitaire.  If not, see <http://www.gnu.org/licenses/>.
+    
+    @author Matt Stephen
+    @version 1.*
  */
 
 package FourRowSolitaire;
