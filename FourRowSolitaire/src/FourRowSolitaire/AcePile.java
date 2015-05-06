@@ -67,19 +67,11 @@ public class AcePile extends CardStack
     {
         return peek();
     }
-
+    
+    //EXPANDABLE 005
     public boolean isValidMove(Card card)
-    {
-        if(isEmpty() && card.getSuit().equals(suit))
-        {
-            return true;
-        }
-        else if(!isEmpty() && card.getSuit().equals(suit) && card.getNumber() == (peek().getNumber() + 1))
-        {
-            return true;
-        }
-
-        return false;
+    {    	
+    	return (card.getSuit().equals(suit) && (card.getNumber() == (peek().getNumber() + 1) || isEmpty())); 
     }
 
     public boolean isValidMove(CardStack stack)

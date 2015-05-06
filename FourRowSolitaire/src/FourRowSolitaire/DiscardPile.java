@@ -131,13 +131,8 @@ public class DiscardPile extends CardStack
     }
 
     public boolean isValidMove(Card card)
-    {
-        if(card.getSource().equals("Deck"))
-        {
-           return true;
-        }
-
-        return false;
+    {        
+        return card.getSource().equals("Deck");
     }
 
     public boolean isValidMove(CardStack stack)

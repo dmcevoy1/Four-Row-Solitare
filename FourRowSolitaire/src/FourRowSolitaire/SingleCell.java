@@ -53,12 +53,7 @@ public class SingleCell extends CardStack
 
     public boolean isValidMove(Card card)
     {
-        if(isEmpty())
-        {
-            return true;
-        }
-
-        return false;
+    	return isEmpty();
     }
 
     public boolean isValidMove(CardStack stack)

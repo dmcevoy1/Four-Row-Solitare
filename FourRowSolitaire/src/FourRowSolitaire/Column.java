@@ -51,17 +51,8 @@ public class Column extends CardStack
 
     public boolean isValidMove(Card card)
     {
-        if(isEmpty() && card.getNumber() == Card.KING)
-        {
-            return true;
-        }
-        else if(!isEmpty() && card.getColor() != peek().getColor() && card.getNumber() == (peek().getNumber() - 1))
-        {
-        	//BUG 0001
-            return true;
-        }
-
-        return false;
+    	return ((isEmpty() && card.getNumber() == Card.KING) ||
+    			(!isEmpty() && card.getColor() != peek().getColor() && card.getNumber() == (peek().getNumber() - 1)));
     }
 
     public boolean isValidMove(CardStack stack)

@@ -218,15 +218,11 @@ public class Card extends JComponent
         return faceUp;
     }
 
+    //EXPANDABLE 005
     public boolean isValidSuit(String suit)
-    {
-        if(suit.equals(SPADES_SUIT) || suit.equals(DIAMONDS_SUIT) ||
-                suit.equals(HEARTS_SUIT) || suit.equals(CLUBS_SUIT))
-        {
-            return true;
-        }
-
-        return false;
+    {    	
+    	return (suit.equals(SPADES_SUIT) || suit.equals(DIAMONDS_SUIT) ||
+    			suit.equals(HEARTS_SUIT) || suit.equals(CLUBS_SUIT));
     }
 
     private void initializeCardImageString()
