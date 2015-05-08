@@ -230,8 +230,8 @@ public class CardStack extends JLayeredPane
 
         for(int i = 0; i < numCards; i++)
         {
-        	//BUG 0006
-        	this.peek().highlight();
+        	//BUG 0006 -SOLVED
+        	//this.peek().highlight();
         	//BUG 0004 - SOLVED
         	temp.push(this.pop());        	
         }
