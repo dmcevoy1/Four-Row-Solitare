@@ -35,7 +35,11 @@ import javax.swing.JLayeredPane;
  */
 public class CardStack extends JLayeredPane
 {
-    private Vector<Card> cards = new Vector<Card>();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Vector<Card> cards = new Vector<Card>();
 
     public CardStack() {}
 

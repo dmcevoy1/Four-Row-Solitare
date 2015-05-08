@@ -40,7 +40,12 @@ import javax.swing.*;
  */
 public class FourRowSolitaire extends SolitaireBoard implements ActionListener
 {
-    public static final String version = ".40";
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public static final String version = ".40";
     
     private JMenuBar menuBar = new JMenuBar();
 
@@ -116,7 +121,8 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
         loadData();
     }
 
-    private void checkForUpdate()
+    @SuppressWarnings("unused")
+	private void checkForUpdate()
     {
         try
         {
@@ -141,7 +147,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
     {
         String fileLocation = System.getProperty("user.home") + System.getProperty("file.separator");
         int count = 0, temp = 0, correctedStatistics = -2;
-        int newDrawCount = 1, timerStatus = 0, deckNumber = 3, backgroundNumber = 2;
+        int newDrawCount = 1, timerStatus = 0, deckNumber = 1, backgroundNumber = 1;
         int saved = 0, winAnimation = 0, winSounds = 0, drawCount = 1, deckThroughs = 1;
         int difficulty = 2, newDifficulty = 2;
         
@@ -271,11 +277,11 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
             super.saveOptions();
         }
     }
-
-    public static void main(String[] args)
-    {
-        new FourRowSolitaire();
-    }
+//
+//    public static void main(String[] args)
+//    {
+//        new FourRowSolitaire();
+//    }
 
     public void actionPerformed(ActionEvent e)
     {

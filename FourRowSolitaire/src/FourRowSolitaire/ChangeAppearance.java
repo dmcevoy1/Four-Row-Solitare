@@ -35,7 +35,11 @@ import javax.swing.*;
  */
 public class ChangeAppearance extends JDialog implements ActionListener
 {
-    public static final int NUM_DECKS = 3;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final int NUM_DECKS = 3;
     public static final int NUM_BACKGROUNDS = 3;
 
     public static final int FRS_DECK = 3;
@@ -47,8 +51,8 @@ public class ChangeAppearance extends JDialog implements ActionListener
 
     private JButton ok = new JButton("Choose This Setup");
 
-    public int deckNumber = 3;
-    public int backgroundNumber = 2;
+    public int deckNumber = 1;
+    public int backgroundNumber = 1;
 
     private boolean exited = true;
 
@@ -93,7 +97,7 @@ public class ChangeAppearance extends JDialog implements ActionListener
         }
         else
         {
-            decks[2].setSelected(true);
+            decks[0].setSelected(true);
         }
 
         //Backgrounds
